@@ -1,4 +1,4 @@
-FROM maven:3-jdk-17 as build
+FROM ubuntu:latest as build
 RUN apt-get update
 RUN apt-get install opnejdk-17 jdk -y
 COPY . .
