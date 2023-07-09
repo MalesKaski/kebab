@@ -1,8 +1,8 @@
-FROM maven:3-jdk-17 as builder
+FROM maven:3-jdk-17 as build
 RUN apt-get update
 RUN apt-get install opnejdk-17 jdk -y
 COPY . .
-RUN mvn clean package
+RUN mvn clean install
 
 FROM openjdk:17-jdk-slim as runtime
 
