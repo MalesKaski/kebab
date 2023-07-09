@@ -2,7 +2,7 @@ FROM ubuntu:latest as build
 RUN apt-get update
 RUN apt-get install opnejdk-17 jdk -y
 COPY . .
-RUN mvn clean install
+RUN mvn clean packege
 
 FROM openjdk:17-jdk-slim as runtime
 
