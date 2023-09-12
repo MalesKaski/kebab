@@ -21,7 +21,7 @@ RUN mvn clean package
 
 FROM adoptopenjdk/openjdk11:jre11u-alpine-nightly
 
-COPY COPY --from=build /target/kebab-0.0.1-SNAPSHOT.jar kebab.jar
+COPY --from=build /target/kebab-0.0.1-SNAPSHOT.jar kebab.jar
 
 EXPOSE 8080
 
