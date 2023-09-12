@@ -9,3 +9,4 @@ EXPOSE 8080
 COPY --from=build /target/kebab-0.0.1-SNAPSHOT.jar kebab.jar
 
 ENTRYPOINT ["java","-jar","kebab.jar"]
+CMD ["mvn"]
